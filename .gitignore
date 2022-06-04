@@ -1,0 +1,10 @@
+*.iml
+/practica 1Wear OS/.gradle
+/practica 1Wear OS/local.properties
+/practica 1Wear OS/.idea/
+/practica 1Wear OS/.DS_Store
+/practica 1Wear OS/build
+/practica 1Wear OS/captures
+/practica 1Wear OS/.externalNativeBuild
+/practica 1Wear OS/.cxx
+/practica 1Wear OS/local.properties
