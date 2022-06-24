@@ -2,6 +2,7 @@ package com.example.wearable1
 
 import android.app.Activity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.wearable1.databinding.ActivityMainBinding
 
 class MainActivity : Activity() {
@@ -19,6 +20,14 @@ class MainActivity : Activity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         //SetContentView se utiliza para llenar la ventana con la interfaz de usuario que se proporciona desde el archivo de diseño.
         setContentView(binding.root)
+        binding.btnOk.setOnClickListener {
+            Toast.makeText(this, "Aceptar", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnCancel.setOnClickListener {//accion click del boton
+            Toast.makeText(this, "Adios", Toast.LENGTH_SHORT).show() //mensaje
+            System.exit(0) //cerrar la app
+        }
 
 
     }
