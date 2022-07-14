@@ -24,56 +24,26 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 @Composable
-fun myImgMaxWidth(idResource: Int)
-{
-    Image(
-        painterResource(id = idResource),
-        contentDescription = "Img de prueba",
-        contentScale = ContentScale.Crop,
-        modifier = Modifier.padding(8.dp).fillMaxWidth()
-    )
+fun myComponent(){
+    textInRow(myText= "texto 2")
 }
-
 @Composable
-fun myImg(idResource: Int)
-{
-    Image(
-        painterResource(id = idResource),
-        contentDescription = "Img de prueba",
-        contentScale = ContentScale.Crop,
-        modifier = Modifier.padding(top=16.dp).size( 20.dp )
-    )
-}
-
-@Composable
-fun textInRow(){
-        Row(modifier=Modifier.padding(5.dp)){
-            myImg(R.drawable.gl)
-            textInColumn()
+fun textInRow(myText:String){
+        Row(modifier=Modifier.padding(10.dp)){
+            textInColumn(myText = "Hola mundo")
+            Text(text=myText)
+            Text(text=myText)
         }
 }
 @Composable
-fun textInColumn(){
-    Column(modifier=Modifier.padding(start = 8.dp, end = 8.dp)){
-        Text(text="Gilberto")
-        Text(text="Villarreal")
-        Text(text="Rodriguez")
+fun textInColumn(myText:String){
+    Column(modifier=Modifier.padding( start = 8.dp,end = 8.dp)){
+        Text(text=myText)
+        Text(text=myText)
+        Text(text=myText)
     }
 }
-@Composable
-fun container(){
-    Column{
-        textInRow()
-        myImgMaxWidth(R.drawable.gl)
-    }
-}
-@Composable
-fun myComponent(){
-    container()
-}
-
 @Preview(showBackground = true)
 @Composable
 fun myPreview(){
